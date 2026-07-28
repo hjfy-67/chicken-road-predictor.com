@@ -1,0 +1,17 @@
+@font-face{font-family:"tabler-icons";font-style:normal;font-weight:400;src:url("fonts_01000523/tabler-icons.woff2") format("woff2"),url("fonts_01000523/tabler-icons.woff") format("woff"),url("fonts_01000523/tabler-icons.ttf") format("truetype")}
+[class^="ti ti-"],[class*=" ti ti-"]{font-family:"tabler-icons"!important;speak:never;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;letter-spacing:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.ti-arrow-up-right:before{content:"\ea21"}
+.ti-brand-facebook_22eb7dac49197654:before{content:"\ec6f"}
+.ti-brand-instagram_f51e64305e10874b:before{content:"\ec79"}
+.ti-brand-linkedin_435167c121fbbee1:before{content:"\ec84"}
+.ti-brand-x_f61fb451554872d0:before{content:"\f1d3"}
+.ti-caret-down-filled_36ed8eb3e1720f6f:before{content:"\f664"}
+.ti-caret-right-filled_187ef5aedd226167:before{content:"\f668"}
+.ti-chevron-right:before{content:"\ea61"}
+.ti-chevrons-right_e76ce584a4a224f7:before{content:"\ea65"}
+.ti-mail:before{content:"\eae5"}
+.ti-map-pin:before{content:"\eae8"}
+.ti-menu-deep_4de23f24522510c6:before{content:"\f0f6"}
+.ti-phone:before{content:"\eb09"}
+.ti-slash_b6fc46c028deab6e:before{content:"\f4f9"}
+.ti-x_744e09437f13881c:before{content:"\eb55"}

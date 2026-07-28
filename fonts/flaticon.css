@@ -1,0 +1,117 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "flaticon";
+  src: url("./flaticon.ttf?7be827e199392bb56ae95dacf43f5036") format("truetype"), url("./flaticon.woff?7be827e199392bb56ae95dacf43f5036") format("woff"), url("./flaticon.woff2?7be827e199392bb56ae95dacf43f5036") format("woff2"), url("./flaticon.eot?7be827e199392bb56ae95dacf43f5036#iefix") format("embedded-opentype"), url("./flaticon.svg?7be827e199392bb56ae95dacf43f5036#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+  font-family: flaticon !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-loupe_60f93b127f0b7bfd:before {
+  content: "";
+}
+
+.flaticon-shopping-cart_ac970f97d087d1c7:before {
+  content: "";
+}
+
+.flaticon-shopping-cart-1_f6b54f15ed6c3b08:before {
+  content: "";
+}
+
+.flaticon-shopping-bag_c1f95ae12d6cca69:before {
+  content: "";
+}
+
+.flaticon-shopping-cart-2_8b9970a32abb5e8f:before {
+  content: "";
+}
+
+.flaticon-placeholder_898a1046bba854e3:before {
+  content: "";
+}
+
+.flaticon-email_5ed25f87bc80609e:before {
+  content: "";
+}
+
+.flaticon-play-button_d0e2076c48e2ac59:before {
+  content: "";
+}
+
+.flaticon-user_5725c9de984918ac:before {
+  content: "";
+}
+
+.flaticon-quotation_a731b2eb145f33d3:before {
+  content: "";
+}
+
+.flaticon-quotation-1_71ae9112dcd163e5:before {
+  content: "";
+}
+
+.flaticon-house_fb25db66622f02be:before {
+  content: "";
+}
+
+.flaticon-phone-call_f4b6e40dfee06a14:before {
+  content: "";
+}
+
+.flaticon-badge_2edbb7bcb80be7c7:before {
+  content: "";
+}
+
+.flaticon-vegan_c4154b44e5fc29ff:before {
+  content: "";
+}
+
+.flaticon-diary_b0e6e811af6cb1f5:before {
+  content: "";
+}
+
+.flaticon-support_eb424836104c0133:before {
+  content: "";
+}
+
+.flaticon-family_1c0ec7850df08e90:before {
+  content: "";
+}
+
+.flaticon-broken-arm_0fbecc2bc25309df:before {
+  content: "";
+}
+
+.flaticon-wounded_96a73cc7ad80bae2:before {
+  content: "";
+}
+
+.flaticon-handcuffs_c3ca8f0ab18c2866:before {
+  content: "";
+}
+
+.flaticon-graduation-cap_590c434750386dfa:before {
+  content: "";
+}
+
+.flaticon-book_56442e66bf153eb2:before {
+  content: "";
+}
+
+.flaticon-auction_3036ee5b17575ce5:before {
+  content: "";
+}
+
+.flaticon-balance_b6219bcddab0d8bb:before {
+  content: "";
+}
+/*# sourceMappingURL=flaticon.css.map */

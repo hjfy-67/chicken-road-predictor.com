@@ -1,0 +1,504 @@
+/* ==========================================================
+   STARTIX HUGO — TARGETED FIXES
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   1. TABLE OF CONTENTS — single vertical list, no columns
+   ---------------------------------------------------------- */
+.toc-content nav ul,
+.toc-content nav > ul {
+  columns: unset !important;
+  column-count: unset !important;
+  -webkit-columns: unset !important;
+  display: block !important;
+}
+
+/* ----------------------------------------------------------
+   2. TABLES — flush, no double borders, proper collapse
+   ---------------------------------------------------------- */
+.hp-table-scroll {
+  border-radius: 0 !important;
+  border: none !important;
+  margin-bottom: 1.5rem;
+}
+
+.hp-table-inner_7d5ea65799d97426 {
+  border-radius: 0 !important;
+}
+
+article table,
+.hp-content table,
+.hp-table-scroll table,
+.hp-table-inner_7d5ea65799d97426 table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+article table th,    article table td,
+.hp-content table th, .hp-content table td,
+.hp-table-scroll table th, .hp-table-scroll table td,
+.hp-table-inner_7d5ea65799d97426 table th,  .hp-table-inner_7d5ea65799d97426 table td {
+  border: 1px solid var(--Border) !important;
+}
+
+/* Prevent wrapper from adding a second border around already-bordered table */
+.hp-table-scroll {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+/* ----------------------------------------------------------
+   3. FAQ SECTION — shade2.png background + floating ? decorations
+   (mirrors Next.js CtaHomeFive: bg-img bg-dark + inline background-image)
+   ---------------------------------------------------------- */
+.faq-section_2cf1b20575fba376 {
+  /* bg-dark equivalent */
+  background-color: #1b1b2f !important;
+  /* bg-img equivalent */
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Floating question-mark decorations — visible */
+.faq-deco_44599edea913d89f {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  z-index: 2;
+}
+
+.faq-deco_44599edea913d89f img {
+  width: 130px;
+  height: auto;
+  opacity: 0.35;
+  filter: brightness(10) saturate(0);
+}
+
+.faq-deco-1_f1922924014df3ee { top: 5%;    left: 2%; }
+.faq-deco-2_b714f5c7bbb496bf { top: 35%;   right: 2%;  transform: rotate(15deg); }
+.faq-deco-3_b5e79bce95b3520f { bottom: 5%; left: 25%;  transform: rotate(-10deg); }
+.faq-deco-4_0ed372f64571a34e { top: 8%;    left: 52%;  transform: rotate(25deg); }
+
+/* Keep container and dividers above decorations */
+.faq-section_2cf1b20575fba376 > .container { position: relative; z-index: 1; }
+.faq-section_2cf1b20575fba376 > .divider_5d7da7dee699a98c   { position: relative; z-index: 1; }
+
+/* Hide the old inline .faq-qmark_8304dd1a72011931 (we're using absolute ones now) */
+.faq-qmark_8304dd1a72011931 { display: none !important; }
+
+/* ----------------------------------------------------------
+   4. FAQ QUESTION / ANSWER STYLING
+   ---------------------------------------------------------- */
+
+/* Question button: black bg, white text */
+.faq-item {
+  background: #000000 !important;
+  border: 1px solid rgba(255,255,255,0.15) !important;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.faq-btn {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+.faq-btn:hover {
+  color: rgba(255,255,255,0.80) !important;
+}
+
+/* Answer block: white bg, black text */
+.faq-body-inner_55c338025dd7d22f {
+  background: #ffffff;
+  color: #111111 !important;
+  padding: 20px 24px !important;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.faq-body-inner_55c338025dd7d22f p,
+.faq-body-inner_55c338025dd7d22f li,
+.faq-body-inner_55c338025dd7d22f a {
+  color: #111111 !important;
+}
+
+/* Open item: keep black question, show white answer below */
+.faq-item.faq-item-open {
+  background: #000000 !important;
+  border-color: rgba(255,255,255,0.30) !important;
+}
+
+.faq-item.faq-item-open .faq-btn {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Chevron stays white on black */
+.faq-chevron_a25da128985fa7d5 {
+  background-color: rgba(255,255,255,0.20) !important;
+}
+
+.faq-item-open .faq-chevron_a25da128985fa7d5 {
+  background-color: rgba(255,255,255,0.35) !important;
+}
+
+/* ----------------------------------------------------------
+   5 & 6. FOOTER — strict row structure + legibility
+   ---------------------------------------------------------- */
+
+/* Reset the multi-column layout to stacked rows */
+.footer-section_c96f66e483be6b19.footer-dark_4b8441b530d6969c .footer-layout_c256302f65396353 {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Row 1: Logo */
+.footer-row-logo_a0a05d7a04df12aa {
+  padding: 1.6rem 0 1rem;
+}
+
+/* Rows 2-3: Disclaimers */
+.footer-row-disclaimers_4b9f14b87f7b32ea {
+  padding: 0 0 1.25rem;
+}
+
+/* Row 4: Nav links only */
+.footer-row-nav_7b0d1cacb02906ec {
+  padding: 1rem 0;
+  border-top: 1px solid rgba(255,255,255,0.10);
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+
+.footer-row-nav_7b0d1cacb02906ec .footer-nav-links_faa63ef283f4d896 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.footer-row-nav_7b0d1cacb02906ec .footer-nav-links_faa63ef283f4d896 li a {
+  color: rgba(255,255,255,0.70);
+  font-size: 14px;
+  font-family: var(--Font-Secondary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color var(--Animation-Duration);
+}
+
+.footer-row-nav_7b0d1cacb02906ec .footer-nav-links_faa63ef283f4d896 li a i {
+  color: var(--Primary);
+  font-size: 14px;
+}
+
+.footer-row-nav_7b0d1cacb02906ec .footer-nav-links_faa63ef283f4d896 li a:hover { color: #ffffff; }
+
+/* Row 5: Copyright + casino logos */
+.footer-row-bottom_43ef507bd9604477 {
+  padding: 1.25rem 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-disclaimer-text_34b1576f9762130c {
+  color: rgba(255,255,255,0.70) !important;
+}
+
+.footer-tagline_11e1df4d92fbcc75 {
+  color: rgba(255,255,255,0.70) !important;
+}
+
+.footer-copyright_f698370f2737ffad {
+  color: rgba(255,255,255,0.70) !important;
+}
+
+.footer-copyright_f698370f2737ffad a {
+  color: rgba(255,255,255,0.70) !important;
+}
+
+.footer-copyright_f698370f2737ffad a:hover { color: var(--Primary) !important; }
+
+article table tr:first-child th,
+article table tr:first-child td,
+.hp-content table tr:first-child th,
+.hp-content table tr:first-child td {
+  border-top: none!important;
+}
+
+article table tr:last-child th,
+article table tr:last-child td,
+.hp-content table tr:last-child th,
+.hp-content table tr:last-child td {
+  border-bottom: none!important;
+}
+
+article table tr th:first-child,
+article table tr td:first-child,
+.hp-content table tr th:first-child,
+.hp-content table tr td:first-child {
+  border-left: none!important;
+}
+
+article table tr th:last-child,
+article table tr td:last-child,
+.hp-content table tr th:last-child,
+.hp-content table tr td:last-child {
+  border-right: none!important;
+}
+
+.hp-table-inner_7d5ea65799d97426 {
+  box-shadow: none !important;
+  border: 1px solid var(--Border) !important;
+  border-radius: 10px!important;
+  margin-bottom: 0;
+}
+
+/* ----------------------------------------------------------
+   7. HEADER — small mobile fixes (≤ 395px)
+   ---------------------------------------------------------- */
+@media (max-width: 395px) {
+  /* Shrink logo a touch so it doesn't crowd the right-side controls */
+  .header-section .navbar-brand_5ae0578736f5d493 img {
+    max-height: 34px;
+  }
+
+  /* Reduce logo right margin */
+  .header-section .navbar-brand_5ae0578736f5d493 {
+    margin-right: 0.5rem;
+  }
+
+  /* Tighten the gap between play button and toggler */
+  .navbar-mobile-end_fc071526d60ee2bb {
+    gap: 0.5rem !important;
+  }
+
+  /* Compact play button: narrower padding, slightly smaller text */
+  .navbar-mobile-end_fc071526d60ee2bb .theme-btn_3b5527bdf7ce9922 {
+    padding: 8px 14px;
+    font-size: 12px;
+    height: 38px;
+    white-space: nowrap;
+  }
+
+  /* Prevent the navbar from wrapping to a second line */
+  .header-section .navbar {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  /* Prevent the navbar container overflowing the viewport */
+  .header-section .navbar > .container,
+  .header-section .navbar > .container-fluid_8fc1eb2f2a2048c4 {
+    flex-wrap: nowrap;
+  }
+
+  /* style-three pill: reduce internal padding so everything fits */
+  .header-section.style-three_3fe41460c78da8aa .navbar {
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+
+  /* Kill the large left margin on the hamburger icon — it pushes the
+     play button into the logo at very narrow widths */
+  .header-section .navbar-toggler i {
+    margin-left: 0 !important;
+  }
+}
+
+/* ----------------------------------------------------------
+   Footer bottom row — centered on small screens (≤ 676px)
+   ---------------------------------------------------------- */
+@media (max-width: 676px) {
+  .footer-row-bottom_43ef507bd9604477 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-copyright_f698370f2737ffad {
+    text-align: center;
+  }
+
+  .footer-trust-logos_e0dd37e74a89d7e3 ul {
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  .footer-trust-logos_e0dd37e74a89d7e3 img {
+    max-height: none;
+    width: auto;
+    max-width: 100%;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+
+  .footer-trust-logos_e0dd37e74a89d7e3 li {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+}
+
+/* ----------------------------------------------------------
+   8. MOBILE HEADER — smooth collapse, no jump, proper layout
+   ≤ 1199px (below xl breakpoint where nav collapses)
+   ---------------------------------------------------------- */
+
+/* Smooth navbar shape transition on mobile open/close */
+@media (max-width: 1199px) {
+  /* Allow #startixNav to wrap onto its own row; space-between keeps
+     logo left and Play+toggler right within the pill */
+  .header-section .navbar,
+  .header-section .navbar.navbar-expand-xl_8aed0ae523b8af78 {
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    align-content: center !important;
+  }
+
+  .header-section.style-three_3fe41460c78da8aa .navbar {
+    transition: border-radius 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Nav panel: hidden from layout when closed, full-row block when open. */
+  #startixNav {
+    display: none !important;
+    flex-basis: 100%;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden !important;
+    padding: 0 !important;
+    transition: max-height 0.35s ease;
+  }
+
+  #startixNav.show {
+    display: block !important;
+  }
+
+  /* overflow-y toggled by JS after transition completes */
+
+  /* Nav items: full width on mobile */
+  .header-section .navbar-nav {
+    width: 100%;
+    padding: 0.5rem 0 1rem;
+  }
+
+  /* Mobile submenus: always in flow, collapsed via max-height.
+     JS animates max-height; overflow stays hidden during animation. */
+  .startix-dd-menu {
+    display: block !important;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+}
+
+/* Fix layout at small widths (≤ 575px) */
+@media (max-width: 575px) {
+  .header-section.style-three_3fe41460c78da8aa .navbar {
+    margin-left: 2% !important;
+    margin-right: 2% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .navbar-mobile-end_fc071526d60ee2bb {
+    gap: 0.5rem !important;
+  }
+
+  .navbar-mobile-end_fc071526d60ee2bb .theme-btn_3b5527bdf7ce9922 {
+    padding: 8px 14px !important;
+    font-size: 13px !important;
+  }
+}
+
+/* Fix: ensure mobile dropdown menu renders INSIDE the expanded header panel
+   (already the case by default since it's in-flow, but ensure z-index is fine) */
+.header-section.style-three_3fe41460c78da8aa.mobile-menu-open {
+  z-index: 9999;
+}
+
+/* ----------------------------------------------------------
+   9. FAQ ITEMS — smooth accordion animation via max-height
+   ---------------------------------------------------------- */
+
+/* Body collapsed by default; JS sets max-height inline on open */
+.faq-body {
+  max-height: 0;
+  overflow: hidden !important;
+  transition: max-height 0.35s ease;
+}
+
+/* CSS fallback for open state (JS also sets inline max-height for accuracy) */
+.faq-item.faq-item-open .faq-body {
+  max-height: 600px;
+}
+
+/* ----------------------------------------------------------
+   10. MOBILE NAV — chevron rotation on submenu open
+   ---------------------------------------------------------- */
+@media (max-width: 1199px) {
+  /* The chevron arrow on items that have a submenu */
+  .startix-dd > a .startix-dd-arrow {
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+
+  /* Rotate when the parent li has dd-open class */
+  .startix-dd.dd-open > a .startix-dd-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+/* ----------------------------------------------------------
+   11. DESKTOP NAV — restore correct layout + chevron rotation
+   ---------------------------------------------------------- */
+@media (min-width: 1200px) {
+  /* Explicitly restore desktop navbar layout in case any mobile rule bleeds through */
+  .header-section .navbar,
+  .header-section .navbar.navbar-expand-xl_8aed0ae523b8af78 {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-content: normal !important;
+    align-items: stretch !important;
+  }
+
+  /* Top-level items only (direct child of .navbar-nav) */
+  .header-section .navbar-nav > li.startix-dd > a .startix-dd-arrow {
+    transition: transform 350ms ease;
+    display: inline-block;
+  }
+
+  .header-section .navbar-nav > li.startix-dd:hover > a .startix-dd-arrow,
+  .header-section .navbar-nav > li.startix-dd:focus-within > a .startix-dd-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+/* ----------------------------------------------------------
+   12. MOBILE TOGGLER — remove erroneous margin-left on icon
+   ---------------------------------------------------------- */
+@media (max-width: 1199px) {
+  .header-section .navbar-toggler i {
+    margin-left: 0 !important;
+  }
+}
+
+.footer-row-logo_a0a05d7a04df12aa a > img {
+  max-width: 200px!important;
+  max-height: 50px!important;
+}
